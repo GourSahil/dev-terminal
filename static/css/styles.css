@@ -1,1 +1,57 @@
-6
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+  /* Main backgrounds */
+  --bg-primary:      #0f0f0f;
+  --bg-secondary:    #1a1a1a;
+  --bg-tertiary:     #222222;
+  --bg-elevated:     #2a2a2a;
+  --bg-overlay:      rgba(15, 15, 15, 0.85);
+
+  /* Text & foreground */
+  --text-primary:    #e0e0e0;
+  --text-secondary:  #b0b0b0;
+  --text-tertiary:   #808080;
+  --text-muted:      #606060;
+
+  /* Main accent colors (the golden/yellow one you use a lot) */
+  --accent:          #ffdd00;
+  --accent-hover:    #ffea33;
+  --accent-active:   #ffc700;
+  --accent-muted:    #ccaa00;
+
+  /* Status / highlight colors */
+  --red:             #ff5555;
+  --pink:            #ff77aa;
+  --purple:          #a855f7;
+  --blue:            #569cd6;
+  --cyan:            #5ddcff;
+  --green:           #55ff99;
+
+  /* Special UI elements */
+  --border:          #333333;
+  --border-hover:    #444444;
+  --divider:         #2a2a2a;
+
+  /* Reading status / tag colors (approximations) */
+  --tag-selfhelp:    #ffdd00;     /* yellow */
+  --tag-fiction:     #a855f7;     /* purple */
+  --tag-nonfiction:  #569cd6;     /* blue */
+  --tag-pop-sci:     #55ff99;     /* mint green */
+  --tag-print:       #888888;
+  --tag-ebook:       #bbbbbb;
+
+  /* Card / item hover states */
+  --hover-bg:        #2f2f2f;
+  --active-bg:       #383838;
+
+  /* Shadows (subtle dark theme friendly) */
+  --shadow-sm:       0 2px 8px rgba(0,0,0,0.45);
+  --shadow-md:       0 6px 20px rgba(0,0,0,0.55);
+}
