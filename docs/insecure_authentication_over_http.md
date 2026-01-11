@@ -1,13 +1,5 @@
-Below is a **clear, professional security report** you can use for documentation, review, or justification.
-It’s written the way engineers and reviewers expect: problem → analysis → conclusion → fixes.
 
-You can paste this directly into your repo or docs.
-
----
-
-# 📄 Security Report
-
-## Insecure Authentication Over HTTP and Why Client-Side Crypto Does Not Fix It
+# Insecure Authentication Over HTTP and Why Client-Side Crypto Does Not Fix It
 
 ---
 
