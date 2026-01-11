@@ -206,10 +206,3 @@ Security is achieved through **correct layering**, not clever cryptography.
 > **If the transport is insecure, the authentication is insecure — by definition.**
 
 ---
-
-If you want, I can also:
-
-* Rewrite this as a **formal design decision record (ADR)**
-* Convert it into **project documentation**
-* Add **diagrams or threat-flow timelines**
-* Tailor it specifically to your admin panel architecture
