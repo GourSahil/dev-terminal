@@ -1,24 +1,77 @@
-# Dev-Terminal
+# 🖥️ Dev-Terminal
 
-This project emulates a linux terminal to display portfolio information.
+**Dev-Terminal** is a web-based project that emulates a Linux-style terminal interface to present developer portfolio information in an interactive and minimal way.
 
-## Technical description
-This is a flask based project that sends data from an sqlite database via json
+Instead of traditional UI cards or pages, users interact with a terminal-like environment to explore data, commands, and content — making the portfolio feel more authentic, technical, and engaging.
 
+---
 
-## Note on credits
-joshu-mcl Is hosting the repo but, it should be noted that the majority
-of the work on this project is or will be performed by other people.
-This credits to this will be changed overtime.
+## ✨ Key Features
 
-## Credits
+- Linux terminal–inspired UI
+- Command-based interaction
+- Clean separation of frontend and backend
+- JSON-based data flow
+- Designed for extensibility and collaboration
 
-[@onkmade] (https://github.com/onkmade) - Front end development
+---
 
-[@GourSahil] (https://github.com/GourSahil) - Back end development
+## 🛠️ Technical Overview
 
-[@josh-mcl] (https://github.com/josh-mcl) - Back end development
+- **Backend:** Flask (Python)
+- **Database:** PostgreSQL
+- **Data Exchange:** JSON APIs
+- **Frontend:** Custom terminal-style UI (HTML/CSS/JS)
 
+The backend exposes structured data from an PostgreSQL database via REST-like endpoints.  
+The frontend consumes this data and renders it dynamically inside a terminal emulator interface.
 
+---
 
+## 🎯 Project Goals
 
+- Provide a unique, terminal-driven portfolio experience  
+- Maintain a clean and stable backend architecture  
+- Encourage collaborative development  
+- Keep the project lightweight and easy to deploy  
+
+---
+
+## 🤝 Collaboration & Credits
+
+This repository is currently hosted under **GourSahil**, but the **majority of the development is performed collaboratively** by multiple contributors.
+
+Credits may evolve over time as the project grows.
+
+### Contributors
+
+#### Backend Development
+- **[@GourSahil](https://github.com/GourSahil)** — Collaborator (Backend Development)  
+- **[@acul009](https://github.com/acul009)** — Collaborator (Backend Development)  
+- **[@EsmoAghamedova](https://github.com/EsmoAghamedova)** — Collaborator (Backend Development)
+
+#### Frontend Development
+- **[@onkmade](https://github.com/onkmade)** — Collaborator (Frontend Development)  
+- **[@Shitanshukumar607](https://github.com/Shitanshukumar607)** — Collaborator (Frontend Development)
+
+---
+
+## 📌 Notes
+
+- The project is actively evolving
+- Architecture decisions prioritize stability and clarity
+- Contributions and improvements are welcome
+
+---
+
+## 🚀 Future Plans (High-Level)
+
+- Expand terminal commands
+- Improve UI realism
+- Add authentication-aware features
+- Enhance backend scalability
+- Refine documentation
+
+---
+
+> *Dev-Terminal aims to feel less like a website and more like a developer environment.*
