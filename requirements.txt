@@ -1,2 +1,6 @@
 flask
 requests
+supabase
+python-dotenv
+pathlib
+logging
