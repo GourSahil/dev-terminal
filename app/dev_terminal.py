@@ -1,4 +1,5 @@
 from flask import Flask
+from flask_cors import CORS
 from pathlib import Path
 import logging
 import os
@@ -19,6 +20,7 @@ class App:
             raise ValueError("Supabase URL and Key must be provided to create the client.")
         
         self.flask_app = Flask(__name__, template_folder=template_folder, static_folder=static_folder)
+        CORS(self.flask_app) # added flask cors for handling cross-origin requests
         self.flask_app.supabase = create_client(supabase_url=supabase_url, supabase_key=supabase_key)
 
         # registering the blueprints here
