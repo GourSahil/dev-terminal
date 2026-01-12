@@ -47,7 +47,7 @@ if __name__ == "__main__":
     app = app_instance.get_app()
     app.run(
         host=config["host"],
-        port=config["port"],
+        port=int(os.environ.get("PORT", config["port"])),
         debug=config.get("debug", False),
         use_reloader=config.get("use_reloader", False)
     )
