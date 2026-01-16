@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <title>Dev-Terminal</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <meta charset="UTF-8">
+    <!-- Embedding the font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="fonts.googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/styles.css">
 </head>
 <body>
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <div class="wrapper">
+        <header>THIS IS HEADER</header>
+        <main>
+            THIS IS MAIn
+        </main>
+        <footer>
+            <div class="typecommand">
+                <input id="command-input" type="text" placeholder="Type a command">
+                <button id="check-command">Check Commands</button>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
