@@ -75,12 +75,16 @@ textarea{
 }
 
 .wrapper{
+    clip-path: url(#wrapperclip);
+    filter: drop-shadow(0px 0px 0px 10px rgb(255, 55, 55));
     flex: 1;
-    /* border: 1px solid var(--border); */
+    border: 1px solid var(--border);
+    position: relative;
     border-radius: 0.65rem;
-    box-shadow: 0 0 0 1px var(--border);
+    box-shadow: 0 0 0 1px var(--accent);
     display: grid;
     grid-template-rows: auto 1fr auto;
+    background: var(--bg-secondary);
 }
 
 footer{
@@ -133,17 +137,24 @@ button{
     color: var(--text-bg);
 }
 
-#Info-btn{
+.rs_typecommand{
+    display: flex;
+    gap: 0.35rem;
+}
+
+#Info-btn, #contribute{
     border: 1px solid var(--border);
     padding: 0.45rem;
     border-radius: 0.45rem;
 
     > svg{
         color: var(--text-bg);
+        height: 18px;
+        width: 18px;
+        vertical-align: middle;
     }
 }
 
-.rs_typecommand{
-    display: flex;
-    gap: 0.35rem;
+main, header{
+    padding: 0.5rem;
 }
