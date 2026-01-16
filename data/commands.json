@@ -1,0 +1,26 @@
+{
+    "clear": {
+        "description": "Clears the terminal screen.",
+        "usage": ["clear", "cls"]
+        },
+    "help": {
+        "description": "Provides information about available commands.",
+        "usage": ["help", "?"]
+        },
+    "uname": {
+        "description": "Displays system information.",
+        "usage": ["uname", "uname -a"]
+        },
+    "sudo": {
+        "description": "Simulates superuser privileges.",
+        "usage": ["sudo", "sudo <command>"]
+        },
+    "exit": {
+        "description": "Exits the terminal session.",
+        "usage": ["exit", "logout", "quit", "poweroff", "shutdown", "bye"]
+    },
+    "getangerlevel": {
+        "description": "Retrieves the current anger level of the system.",
+        "usage": ["getangerlevel", "angerlevel"]
+    }
+}

@@ -9,11 +9,12 @@ load_dotenv(dotenv_path=env_path)
 
 from libs.logger import setup_logging
 from app.dev_terminal import App
-from libs.utils import load_config
+from libs.utils import load_config, load_commands
 
 # defining paths
 config_path = os.path.join(os.path.dirname(__file__), 'config', 'config.json') # configuration path basically config/config.json, using os to make it cross platform
 log_file_path = Path("logs") / "app.log"
+commands_path = os.path.join(os.path.dirname(__file__), 'data', 'commands.json') # commands path basically data/commands.json, using os to make it cross platform
 
 # Setting up logging
 os.makedirs("logs", exist_ok=True)
@@ -25,6 +26,13 @@ config = load_config(
     handle_failure=True, 
     config_data={"host": "127.0.0.1", "port": 5000, "debug": False} # backup default config
         )
+
+# loading the commands
+commands = load_commands(
+    config_path=commands_path,
+    handle_failure=True,
+    fallback_data={}
+)
 
 import logging
 logger = logging.getLogger(__name__)
@@ -44,7 +52,12 @@ if __name__ == "__main__":
         supabase_key=os.getenv("SUPABASE_KEY")
     )
     
+    app_instance.add_env_variable("KERNEL", "Nexus") # Register kernel name
+    app_instance.add_env_variable("VERSION", "NexusV0.51-alpha") # Register version
+    app_instance.add_env_variable("TERMINAL_COMMANDS", commands) # Register ur commands there
+    app_instance.add_env_variable("DEBUG_MODE", config.get("debug", False)) # Register debug mode
     app = app_instance.get_app()
+    app.secret_key = os.environ.get("SECRET_KEY", "default_secret_key")  # Set secret key for session management
     app.run(
         host=config["host"],
         port=int(os.environ.get("PORT", config["port"])),

@@ -4,10 +4,6 @@
 
 Instead of traditional UI cards or pages, users interact with a terminal-like environment to explore data, commands, and content — making the portfolio feel more authentic, technical, and engaging.
 
-## Build Test
-**Build Test** is the branch where every commit is going to be deployed on Render at [dev-terminal.onrender](https://dev-terminal.onrender.com).
-**Contributors** can commit the things to this branch when they want to test that how they things will be seen on real deployed web by commiting the chages to this branch.
-
 ---
 
 ## ✨ Key Features

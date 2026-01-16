@@ -2,11 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dev-Terminal</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SevUI</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+
+    <!-- Application's CSS Stylesheets -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pinned.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mascot.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/terminal.css') }}">
 </head>
 <body>
-    <h1>Welcome to the server, things r working properly</h1>
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <div id="app">
+        <!-- Main Application Component -->
+        <div id="pinned-container" class="container">
+            <div class="debug_text">
+                <p>pinned-container</p>
+            </div>
+        </div>
+
+        <div id="mascot-container" class="container">
+            <div class="debug_text">
+                <p>mascot-container</p>
+            </div>
+        </div>
+        
+        <div id="terminal-container" class="container">
+            <div id="terminal-output">
+
+            </div>
+            <div id="terminal-input-container">
+                <span id="terminal-prompt">$&nbsp;</span><span id="terminal-command" contenteditable="true"></span>
+                <input type="text" id="terminal-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+            </div>
+        </div>
+    </div>
+
+    <!-- Helper JS Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/ansi_up@5.1.0/ansi_up.min.js"></script>
+
+    <!-- Application's JS Libraries -->
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/terminal.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/mascot.js') }}"></script>
 </body>
 </html>

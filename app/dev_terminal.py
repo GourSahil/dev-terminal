@@ -23,8 +23,11 @@ class App:
         CORS(self.flask_app) # added flask cors for handling cross-origin requests
         self.flask_app.supabase = create_client(supabase_url=supabase_url, supabase_key=supabase_key)
 
-        # registering the blueprints here
-        self.flask_app.register_blueprint(index_bp)
+    def add_env_variable(self, key, value):
+        self.flask_app.config[key] = value
 
     def get_app(self) -> Flask:
+        # registering the blueprints here
+        self.flask_app.register_blueprint(index_bp)
+        
         return self.flask_app

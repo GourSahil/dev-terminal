@@ -1,0 +1,54 @@
+#terminal-container {
+    background-color: var(--terminal-bg, #0d1117);
+    flex: 0 0 30%;
+    min-height: 0;
+    overflow-y: auto;
+    color: white;
+
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+
+    display: flex;
+    flex-direction: column;
+    padding-left: 2px;
+    box-sizing: border-box;
+
+    text-shadow:
+        0 0 2px currentColor,
+        0 0 6px rgba(255, 255, 255, 0.15);
+}
+
+#terminal-input-container {
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    border-top: 1px solid var(--terminal-border, #30363d);
+    
+}
+
+#terminal-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: white;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    outline: none;
+}
+
+#terminal-output {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+/* Creating the view like real terminal */
+
+.command,
+.result {
+    margin: 0;
+    padding: 0;
+    line-height: 1.35;
+    white-space: pre-wrap;
+}
+
