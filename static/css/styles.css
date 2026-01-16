@@ -19,6 +19,7 @@
   --text-secondary:  #b0b0b0;
   --text-tertiary:   #808080;
   --text-muted:      #606060;
+  --text-bg:         #757575;
 
   /* Main accent colors (the golden/yellow one you use a lot) */
   --accent:          #ffdd00;
@@ -106,15 +107,43 @@ footer{
     max-width: 30rem;
 }
 
+/* For all Svgs: Default Pattern */
+svg{
+    width: 18px;
+    height: 18px;
+    color: var(--text-secondary);
+    vertical-align: middle;
+    background: none;
+}
+
+/* For all Buttons */
 button{
+    cursor: pointer;
     background: none;
     outline: transparent;
-    border: 1.5px solid var(--border);
+    border: 1px solid var(--border);
     color: var(--text-secondary);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 #check-command{
     padding: 0.45rem;
     font-size: 11pt;
     border-radius: 0.45rem;
+    color: var(--text-bg);
+}
+
+#Info-btn{
+    border: 1px solid var(--border);
+    padding: 0.45rem;
+    border-radius: 0.45rem;
+
+    > svg{
+        color: var(--text-bg);
+    }
+}
+
+.rs_typecommand{
+    display: flex;
+    gap: 0.35rem;
 }
